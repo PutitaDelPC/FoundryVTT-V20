@@ -34,7 +34,7 @@
   "primaryTokenAttribute": "resources.health",
   "secondaryTokenAttribute": "resources.power",
   "url": "https://github.com/PutitaDelPC/FoundryVTT-V20",
-  "manifest": "https://github.com/PutitaDelPC/FoundryVTT-V20/master/system.json",
+  "manifest": "https://github.com/PutitaDelPC/FoundryVTT-V20/blob/master/system.json",
   "download": "https://github.com/PutitaDelPC/FoundryVTT-V20/archive/master.zip",
   "license": "LICENSE.md"
 }

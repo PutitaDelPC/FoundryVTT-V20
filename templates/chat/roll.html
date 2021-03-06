@@ -1,0 +1,42 @@
+<section class="dw-chat-card">
+  <div class="cell cell--chat">
+    <h2 class="cell__title">{{title}}</h2>
+    <div class="row"><em>{{difficultyMessage}}</em></div>
+    <div class="row"><em>{{{message}}}</em></div>
+    <div class="roll">
+      <div class="dice-roll">
+        <div class="dice-result">
+          <div class="dice-formula">{{result}}</div>
+          <div class="dice-tooltip">
+            <section class="tooltip-part">
+              <div class="dice">
+                <p class="part-formula">
+                  <span class="part-total">{{success}}/{{diceCount}}
+                    {{#iff poolConfig "!=" ""}}
+                      ({{poolConfig}})
+                    {{/iff}}
+                  </span>
+                </p>
+                <ol class="dice-rolls">
+                  {{#each rolls}}
+                    {{#iff this.result "==" 1}}
+                      <li class="roll die d10 min">{{this.result}}</li>
+                    {{/iff}}
+                    {{#iff this.result ">=" ../difficulty}}
+                     <li class="roll die d10 max">{{this.result}}</li>
+                    {{/iff}}
+                    {{#iff this.result ">" 1}}
+                      {{#iff this.result "<" ../difficulty}}
+                        <li class="roll die d10">{{this.result}}</li>
+                      {{/iff}}
+                    {{/iff}}
+                  {{/each}}
+                </ol>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

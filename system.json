@@ -1,0 +1,40 @@
+{
+  "name": "FoundryVTT-V20",
+  "title": "Vampiro La Mascarada (V20)",
+  "description": "Un sistema completo de Vampiro La Mascarada (V20) en el entorno Foundry VTT.",
+  "version": "0.0.1",
+  "minimumCoreVersion": "0.7.9",
+  "compatibleCoreVersion": "0.7.9",
+  "templateVersion": 2,
+  "author": "PutitaDelPC",
+  "scripts": [
+    "./rolls/dice-pool.js"
+  ],
+  "esmodules": [
+    "module/system.js"
+  ],
+  "styles": [ "ui/styles.css" ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Spanish",
+      "path": "lang/es.json"
+    }
+  ],
+  "socket": false,
+  "initiative": "1d20",
+  "gridDistance": 2,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "resources.health",
+  "secondaryTokenAttribute": "resources.power",
+  "url": "https://github.com/PutitaDelPC/FoundryVTT-V20",
+  "manifest": "https://github.com/PutitaDelPC/FoundryVTT-V20/master/system.json",
+  "download": "https://github.com/PutitaDelPC/FoundryVTT-V20/archive/master.zip",
+  "license": "LICENSE.md"
+}

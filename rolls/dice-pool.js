@@ -61,7 +61,7 @@ class DicePoolVTM20 {
       roll,
     };
 
-    let template = 'systems/foundryvtt-vtm-20th/templates/chat/roll.html';
+    let template = 'systems/foundryvtt-v20/templates/chat/roll.html';
     const attributeLabel = game.i18n.localize(attributeDice.label);
     const abilityLabel = game.i18n.localize(abilityDice.label);
     const difficultyLabel = game.i18n.localize(`DIFFICULTY.${difficulty}`);

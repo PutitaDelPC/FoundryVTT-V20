@@ -82,7 +82,7 @@
                             <ul>
                                 {{#each data.attributes.physical as |attribute key|}}
                                 <li class="radio-input">
-                                    {{> systems/foundryvtt-vtm-20th/templates/attribute-input.html value=attribute.value
+                                    {{> systems/foundryvtt-v20/templates/attribute-input.html value=attribute.value
                                     key=key label=attribute.label id=../actor._id key=key
                                     prefix="data.attributes.physical" min=0 max=5 selected=../options.selectedAttribute
                                     type="attribute"}}
@@ -95,7 +95,7 @@
                             <ul>
                                 {{#each data.attributes.social as |attribute key|}}
                                 <li class="radio-input">
-                                    {{> systems/foundryvtt-vtm-20th/templates/attribute-input.html value=attribute.value
+                                    {{> systems/foundryvtt-v20/templates/attribute-input.html value=attribute.value
                                     key=key label=attribute.label id=../actor._id key=key
                                     prefix="data.attributes.social" min=0 max=5 selected=../options.selectedAttribute
                                     type="attribute"}}
@@ -108,7 +108,7 @@
                             <ul>
                                 {{#each data.attributes.mental as |attribute key|}}
                                 <li class="radio-input">
-                                    {{> systems/foundryvtt-vtm-20th/templates/attribute-input.html value=attribute.value
+                                    {{> systems/foundryvtt-v20/templates/attribute-input.html value=attribute.value
                                     key=key label=attribute.label id=../actor._id key=key
                                     prefix="data.attributes.mental" min=0 max=5 selected=../options.selectedAttribute
                                     type="attribute"}}
@@ -127,7 +127,7 @@
                             <ul>
                                 {{#each data.abilities.talents as |ability key|}}
                                 <li class="radio-input">
-                                    {{> systems/foundryvtt-vtm-20th/templates/attribute-input.html value=ability.value
+                                    {{> systems/foundryvtt-v20/templates/attribute-input.html value=ability.value
                                     key=key label=ability.label id=../actor._id key=key prefix="data.abilities.talents"
                                     min=0 max=5 selected=../options.selectedAbility type="ability"}}
                                 </li>
@@ -140,7 +140,7 @@
                             <ul>
                                 {{#each data.abilities.skills as |ability key|}}
                                 <li class="radio-input">
-                                    {{> systems/foundryvtt-vtm-20th/templates/attribute-input.html value=ability.value
+                                    {{> systems/foundryvtt-v20/templates/attribute-input.html value=ability.value
                                     key=key label=ability.label id=../actor._id key=key prefix="data.abilities.skills"
                                     min=0 max=5 selected=../options.selectedAbility type="ability"}}
                                 </li>
@@ -152,7 +152,7 @@
                             <ul>
                                 {{#each data.abilities.knowledges as |ability key|}}
                                 <li class="radio-input">
-                                    {{> systems/foundryvtt-vtm-20th/templates/attribute-input.html value=ability.value
+                                    {{> systems/foundryvtt-v20/templates/attribute-input.html value=ability.value
                                     key=key label=ability.label id=../actor._id key=key
                                     prefix="data.abilities.knowledges" min=0 max=5 selected=../options.selectedAbility type="ability"}}
                                 </li>
@@ -200,7 +200,7 @@
                             <ul>
                                 {{#each data.advantages.disciplines as |discipline key|}}
                                 <li class="radio-input">
-                                    {{> systems/foundryvtt-vtm-20th/templates/attribute-input.html
+                                    {{> systems/foundryvtt-v20/templates/attribute-input.html
                                     value=discipline.value label=discipline.label id=../actor._id key=key
                                     prefix="data.advantages.disciplines" min=0 max=5 type="discipline"}}
                                 </li>
@@ -212,7 +212,7 @@
                             <ul>
                                 {{#each data.advantages.backgrounds as |background key|}}
                                 <li class="radio-input">
-                                    {{> systems/foundryvtt-vtm-20th/templates/attribute-input.html
+                                    {{> systems/foundryvtt-v20/templates/attribute-input.html
                                     value=background.value label=background.label id=../actor._id key=key
                                     prefix="data.advantages.backgrounds" min=0 max=5 type="background"}}
                                 </li>
@@ -224,7 +224,7 @@
                             <ul>
                                 {{#each data.advantages.virtues as |virtue key|}}
                                 <li class="radio-input">
-                                    {{> systems/foundryvtt-vtm-20th/templates/attribute-input.html
+                                    {{> systems/foundryvtt-v20/templates/attribute-input.html
                                     value=virtue.value label=virtue.label id=../actor._id key=key
                                     prefix="data.advantages.virtues" min=0 max=5 type="virtue"}}
                                 </li>

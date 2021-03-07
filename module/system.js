@@ -53,9 +53,9 @@ Hooks.once("init", async function() {
   });
   // Pre-load templates
   loadTemplates([
-    "systems/foundryvtt-vtm-20th/templates/attribute-input.html",
-    "systems/foundryvtt-vtm-20th/templates/chat/select.html",
-    "systems/foundryvtt-vtm-20th/templates/chat/roll.html",
+    "systems/foundryvtt-v20/templates/attribute-input.html",
+    "systems/foundryvtt-v20/templates/chat/select.html",
+    "systems/foundryvtt-v20/templates/chat/roll.html",
   ]);
 
 

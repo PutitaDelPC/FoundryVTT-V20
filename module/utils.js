@@ -1,4 +1,4 @@
 const systemHandle = "vtm20";
-const systemName = "foundryvtt-vtm-20th";
+const systemName = "foundryvtt-v20";
 
 export { systemHandle, systemName };

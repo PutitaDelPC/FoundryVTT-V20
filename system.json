@@ -1,5 +1,5 @@
 {
-  "name": "FoundryVTT-V20",
+  "name": "foundryvtt-v20",
   "title": "Vampiro La Mascarada (V20)",
   "description": "Un sistema completo de Vampiro La Mascarada (V20) en el entorno Foundry VTT.",
   "version": "0.0.1",
@@ -33,8 +33,8 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "resources.health",
   "secondaryTokenAttribute": "resources.power",
-  "url": "https://github.com/PutitaDelPC/FoundryVTT-V20",
-  "manifest": "https://github.com/PutitaDelPC/FoundryVTT-V20/blob/master/system.json",
-  "download": "https://github.com/PutitaDelPC/FoundryVTT-V20/archive/master.zip",
+  "url": "https://github.com/PutitaDelPC/foundryvtt-v20",
+  "manifest": "https://github.com/PutitaDelPC/foundryvtt-v20/blob/master/system.json",
+  "download": "https://github.com/PutitaDelPC/foundryvtt-v20/archive/master.zip",
   "license": "LICENSE.md"
 }

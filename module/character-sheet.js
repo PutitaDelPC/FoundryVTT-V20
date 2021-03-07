@@ -78,6 +78,7 @@ export class VampireActorSheet extends ActorSheet {
     }
 
     console.log(data);
+    
     return data;
   }
 

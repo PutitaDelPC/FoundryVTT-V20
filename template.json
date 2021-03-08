@@ -1,6 +1,8 @@
 {
   "Actor": {
-    "types": ["character"],
+    "types": [
+      "character"
+    ],
     "character": {
       "name": "",
       "player": "",
@@ -30,7 +32,7 @@
             "value": 1
           }
         },
-        "social": {    
+        "social": {
           "charisma": {
             "type": "Number",
             "label": "CHAR.CHARISMA",
@@ -519,25 +521,59 @@
     }
   },
   "Item": {
-    "types": ["macro", "advantage", "clan"],
+    "types": [
+      "weapon",
+      "armor",
+      "macro",
+      "advantage",
+      "clan"
+    ],
     "templates": {
       "base": {
-        "description": "",
-        "tooltip": ""
+        "description": "description",
+        "tooltip": "tooltip"
       },
       "macroProps": {
         "attribute": "strength",
         "ability": "athletics"
       }
     },
+    "weapon": {
+      "templates": [
+        "base"
+      ],
+      "kind": "rangedWeapon",
+      "damage": 1,
+      "typeOfDamageVSMortals": "bashing",
+      "typeOfDamageVSVampires": "bashing",
+      "range": 1,
+      "rate": 1,
+      "capacity": 1,
+      "concealment": "pocket"
+    },
+    "armor": {
+      "templates": [
+        "base"
+      ],
+      "class" : 1,
+      "rating" : 1,
+      "penalty" : 0
+    },
     "macro": {
-      "templates": ["base", "macroProps"]
+      "templates": [
+        "base",
+        "macroProps"
+      ]
     },
     "advantage": {
-      "templates": ["base"]
+      "templates": [
+        "base"
+      ]
     },
     "clan": {
-      "templates": ["base"]
+      "templates": [
+        "base"
+      ]
     }
   }
 }

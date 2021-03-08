@@ -1,4 +1,5 @@
 import { systemHandle, systemName } from "../utils.js";
+
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
@@ -9,7 +10,7 @@ export class VampireItemSheet extends ItemSheet {
     static get defaultOptions() {
       return mergeObject(super.defaultOptions, {
         classes: [systemHandle, "sheet", "item"],
-        width: 520,
+        width: 750,
         height: 480,
 //        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
       });
@@ -19,6 +20,7 @@ export class VampireItemSheet extends ItemSheet {
     get template() {
       const path = `systems/${systemName}/templates/items`;
       const template = `${path}/item-${this.item.data.type}-sheet.html`;
+
       return template;
     }
   
@@ -27,7 +29,9 @@ export class VampireItemSheet extends ItemSheet {
     /** @override */
     getData() {
       const data = super.getData();
-      const actorData = this.actor ? this.actor.data : {};
+      //const actorData = this.actor ? this.actor.data : {};
+      data.config = CONFIG.vtm20;
+
       return data;
     }
   

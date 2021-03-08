@@ -3,20 +3,20 @@
  * Author: Atropos
  * Software License: GNU GPLv3
  */
-
-import { systemHandle }from "./utils.js";
+import { systemHandle } from "./utils.js";
+import { vtm20 } from "./config.js";
 
 // Import Modules
 import { VampireActor } from "./character.js";
-import { VampireItemSheet } from "./items/item-sheet.js";
-import { VampireItem } from "./items/item.js";
 import { VampireActorSheet } from "./character-sheet.js";
+import { VampireItem } from "./items/item.js";
+import { VampireItemSheet } from "./items/item-sheet.js";
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
 /* -------------------------------------------- */
 
-Hooks.once("init", async function() {
+Hooks.once("init", async function () {
   console.log(`Initializing Vampire the Masquerade 20th System`);
 
   game[systemHandle] = {
@@ -24,16 +24,19 @@ Hooks.once("init", async function() {
     VampireItem,
     rollItemMacro
   }
-	/**
-	 * Set an initiative formula for the system
-	 * @type {String}
-	 */
-	CONFIG.Combat.initiative = {
-	  formula: "1d10 + @attributes.physical.dexterity.value + @attributes.mental.wits.value",
+
+  CONFIG.vtm20 = vtm20;
+
+  /**
+   * Set an initiative formula for the system
+   * @type {String}
+   */
+  CONFIG.Combat.initiative = {
+    formula: "1d10 + @attributes.physical.dexterity.value + @attributes.mental.wits.value",
     decimals: 2
   };
 
-	// Define custom Entity classes
+  // Define custom Entity classes
   CONFIG.Actor.entityClass = VampireActor;
 
   // Register sheet application classes
@@ -59,7 +62,7 @@ Hooks.once("init", async function() {
   ]);
 
 
-  Handlebars.registerHelper('times', function(n, block) {
+  Handlebars.registerHelper('times', function (n, block) {
     var accum = '';
     // this will iterate from 0 to n -> so it will do it n+1 times
     for (var i = 0; i <= n; ++i) {
@@ -75,7 +78,7 @@ Hooks.once("init", async function() {
     var v2 = parseInt(value2);
     switch (operator) {
       case "+":
-        return v1 + v2; 
+        return v1 + v2;
       case "-":
         return v1 - v2
       default:
@@ -115,7 +118,7 @@ Hooks.once("init", async function() {
   });
 });
 
-Hooks.once("ready", async function() {
+Hooks.once("ready", async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on("hotbarDrop", (bar, data, slot) => createBoilerplateMacro(data, slot));
 });
@@ -133,7 +136,7 @@ Hooks.once("ready", async function() {
 async function createBoilerplateMacro(data, slot) {
   console.log(data, slot);
   if (data.type !== "Item") return;
-  
+
   if (!("data" in data) && !("id" in data)) return ui.notifications.warn("You can only create macro buttons for owned Items");
   const item = data.data || game.items.get(data.id);
   console.log(item);

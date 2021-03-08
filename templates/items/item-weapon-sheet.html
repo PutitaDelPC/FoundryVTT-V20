@@ -1,0 +1,72 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+    </header>
+    <div>
+        <table>
+            <tr>
+                <th>{{localize "WEAPON.KIND"}}</th>
+                <th>{{localize "WEAPON.DAMAGE"}}</th>
+                <th>{{localize "WEAPON.RANGE"}}</th>
+                <th>{{localize "WEAPON.RATE"}}</th>
+                <th>{{localize "WEAPON.CAPACITY"}}</th>
+                <th>{{localize "WEAPON.CONCEALMENT"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="data.kind">
+                        {{#select data.kind}}
+                        {{#each config.weaponKind as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.range" type="text" value="{{data.range}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.rate" type="text" value="{{data.rate}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.capacity" type="text" value="{{data.capacity}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <select name="data.concealment">
+                        {{#select data.concealment}}
+                        {{#each config.concealment as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <label for="data.typeOfDamageVSMortals">{{localize "WEAPON.TYPEOFDAMAGEVSMORTALS"}}</label>
+        <select name="data.typeOfDamageVSMortals">
+            {{#select data.typeOfDamageVSMortals}}
+            {{#each config.damageType as |name type|}}
+            <option value="{{type}}">{{localize name}}</option>
+            {{/each}}
+            {{/select}}
+        </select>
+        <label for="data.typeOfDamageVSVampires">{{localize "WEAPON.TYPEOFDAMAGEVSVAMPIRES"}}</label>
+        <select name="data.typeOfDamageVSVampires">
+            {{#select data.typeOfDamageVSVampires}}
+            {{#each config.damageType as |name type|}}
+            <option value="{{type}}">{{localize name}}</option>
+            {{/each}}
+            {{/select}}
+        </select>
+        <div class="sheet-header-big">
+            <h2>{{localize "WEAPON.DESCRIPTION"}}</h2>
+        </div>
+        <div style="flex: 1; width: 100%">
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
+    </div>
+</form>

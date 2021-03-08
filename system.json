@@ -8,13 +8,17 @@
   "templateVersion": 2,
   "author": "PutitaDelPC",
   "scripts": [
-    "./rolls/dice-pool.js"
+    "rolls/dice-pool.js"
   ],
   "esmodules": [
     "module/system.js"
   ],
-  "styles": [ "ui/styles.css" ],
-  "packs": [],
+  "styles": [
+    "ui/styles.css"
+  ],
+  "packs": [
+
+  ],
   "languages": [
     {
       "lang": "en",
@@ -28,7 +32,7 @@
     }
   ],
   "socket": false,
-  "initiative": "1d20",
+  "initiative": "1d10 + @attributes.physical.dexterity.value + @attributes.mental.wits.value",
   "gridDistance": 2,
   "gridUnits": "m",
   "primaryTokenAttribute": "resources.health",

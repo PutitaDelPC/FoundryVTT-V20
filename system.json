@@ -14,7 +14,7 @@
     "module/system.js"
   ],
   "styles": [
-    "ui/styles.css"
+    "ui/vtm20.css"
   ],
   "packs": [
 

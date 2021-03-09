@@ -15,8 +15,10 @@ export class VampireItem extends Item {
         const data = itemData.data;
         const preparedData = { ...data, actorData };
         console.log("prepared Data", preparedData);
+        
         return preparedData;
     }
+    
     /**
      * Handle clickable rolls.
      * @param {Event} event   The originating click event

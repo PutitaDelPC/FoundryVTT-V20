@@ -3,7 +3,7 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
     </header>
-    <div>
+    <div class="columns">
         <table>
             <tr>
                 <th>{{localize "WEAPON.KIND"}}</th>
@@ -46,26 +46,32 @@
                 </td>
             </tr>
         </table>
-        <label for="data.typeOfDamageVSMortals">{{localize "WEAPON.TYPEOFDAMAGEVSMORTALS"}}</label>
-        <select name="data.typeOfDamageVSMortals">
-            {{#select data.typeOfDamageVSMortals}}
-            {{#each config.damageType as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}}
-            {{/select}}
-        </select>
-        <label for="data.typeOfDamageVSVampires">{{localize "WEAPON.TYPEOFDAMAGEVSVAMPIRES"}}</label>
-        <select name="data.typeOfDamageVSVampires">
-            {{#select data.typeOfDamageVSVampires}}
-            {{#each config.damageType as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}}
-            {{/select}}
-        </select>
+        <div class="rows">
+            <label style="width: 160px" for="data.typeOfDamageVSMortals">{{localize
+                "WEAPON.TYPEOFDAMAGEVSMORTALS"}}:</label>
+            <select style="flex-grow: 1" name="data.typeOfDamageVSMortals">
+                {{#select data.typeOfDamageVSMortals}}
+                {{#each config.damageType as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+        </div>
+        <div class="rows">
+            <label style="width: 160px" for="data.typeOfDamageVSVampires">{{localize
+                "WEAPON.TYPEOFDAMAGEVSVAMPIRES"}}:</label>
+            <select style="flex-grow: 1" name="data.typeOfDamageVSVampires">
+                {{#select data.typeOfDamageVSVampires}}
+                {{#each config.damageType as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+        </div>
         <div class="sheet-header-big">
             <h2>{{localize "WEAPON.DESCRIPTION"}}</h2>
         </div>
-        <div style="flex: 1; width: 100%">
+        <div style="flex: 1; flex-basis: content;">
             {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
         </div>
     </div>

@@ -1,42 +1,41 @@
-import { systemHandle, systemName } from "../utils.js";
+import { systemHandle, systemName } from '../utils.js';
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
 export class VampireItemSheet extends ItemSheet {
-
     /** @override */
     static get defaultOptions() {
-      return mergeObject(super.defaultOptions, {
-        classes: [systemHandle, "sheet", "item"],
-        width: 460,
-        height: 400,
-//        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
-      });
+        return mergeObject(super.defaultOptions, {
+            classes: [ systemHandle, 'sheet', 'item' ],
+            width: 460,
+            height: 400
+            //        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+        });
     }
-  
+
     /** @override */
     get template() {
-      const path = `systems/${systemName}/templates/items`;
-      const template = `${path}/item-${this.item.data.type}-sheet.html`;
+        const path = `systems/${systemName}/templates/items`;
+        const template = `${path}/item-${this.item.data.type}-sheet.html`;
 
-      return template;
+        return template;
     }
-  
+
     /* -------------------------------------------- */
-  
+
     /** @override */
     getData() {
-      const data = super.getData();
-      //const actorData = this.actor ? this.actor.data : {};
-      data.config = CONFIG.vtm20;
+        const data = super.getData();
+        //const actorData = this.actor ? this.actor.data : {};
+        data.config = CONFIG.vtm20;
 
-      return data;
+        return data;
     }
-  
+
     // /* -------------------------------------------- */
-  
+
     // /** @override */
     // setPosition(options = {}) {
     //   const position = super.setPosition(options);
@@ -45,17 +44,16 @@ export class VampireItemSheet extends ItemSheet {
     //   sheetBody.css("height", bodyHeight);
     //   return position;
     // }
-  
+
     // /* -------------------------------------------- */
-  
+
     // /** @override */
     // activateListeners(html) {
     //   super.activateListeners(html);
-  
+
     //   // Everything below here is only needed if the sheet is editable
     //   if (!this.options.editable) return;
-  
+
     //   // Roll handlers, click handlers, etc. would go here.
     // }
-  }
-  
+}

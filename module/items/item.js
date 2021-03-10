@@ -14,11 +14,11 @@ export class VampireItem extends Item {
         const actorData = this.actor ? this.actor.data : {};
         const data = itemData.data;
         const preparedData = { ...data, actorData };
-        console.log("prepared Data", preparedData);
-        
+        console.log('prepared Data', preparedData);
+
         return preparedData;
     }
-    
+
     /**
      * Handle clickable rolls.
      * @param {Event} event   The originating click event
@@ -34,8 +34,8 @@ export class VampireItem extends Item {
         let roll = new Roll('d20+@abilities.str.mod', actorData);
         let label = `Rolling ${item.name}`;
         roll.roll().toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            flavor: label
         });
     }
 }

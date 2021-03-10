@@ -85,17 +85,16 @@
           text-decoration: underline;
           text-shadow: none;
       }*/
-.vtm20 .sheet-body {
+.vtm20.actor .sheet-body {
   margin: 35px;
   overflow: hidden;
   flex: 1;
 }
-.vtm20 .sheet-body .tab {
+.vtm20.actor .sheet-body .tab {
   height: 100%;
   overflow-y: auto;
 }
-.vtm20 .editor,
-.vtm20 .editor-content {
+.vtm20.sheet .editor {
   height: 100%;
 }
 .vtm20 .item-list {
@@ -169,6 +168,9 @@
 .vtm20.sheet .primary h4 {
   font-family: "Denver Serial Black";
   border-bottom: 0;
+}
+.vtm20.sheet .sheet-header {
+  flex: 0 0 100px;
 }
 .vtm20.sheet .sheet-header-big {
   width: 100%;
@@ -382,6 +384,50 @@
 .vtm20.sheet .roll-status-2 .difficulty-dialog {
   display: flex;
 } */
+/* ----------------------------------------- */
+/*  Flexbox                                  */
+/* ----------------------------------------- */
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.flexrow > * {
+  flex: 1;
+}
+.flexrow .flex1 {
+  flex: 1;
+}
+.flexrow .flex2 {
+  flex: 2;
+}
+.flexrow .flex3 {
+  flex: 3;
+}
+.flexrow .flex4 {
+  flex: 4;
+}
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.flexcol > * {
+  flex: 1;
+}
+.flexcol .flex1 {
+  flex: 1;
+}
+.flexcol .flex2 {
+  flex: 2;
+}
+.flexcol .flex3 {
+  flex: 3;
+}
+.flexcol .flex4 {
+  flex: 4;
+}
 .vtm20.sheet.item {
   min-width: 460px;
   min-height: 400px;
@@ -396,19 +442,4 @@
 }
 .vtm20.sheet.item table input {
   text-align: center;
-}
-.vtm20.sheet.item .rows {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.vtm20.sheet.item .columns {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-}
-.vtm20.sheet.item .description {
-  height: 150px;
 }

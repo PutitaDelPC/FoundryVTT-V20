@@ -1,9 +1,9 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{cssClass}} flexcol" autocomplete="off">
     <header class="sheet-header">
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
     </header>
-    <div class="columns">
+    <section class="sheet-body">
         <table>
             <tr>
                 <th>{{localize "WEAPON.KIND"}}</th>
@@ -46,10 +46,10 @@
                 </td>
             </tr>
         </table>
-        <div class="rows">
+        <div class="flexrow">
             <label style="width: 160px" for="data.typeOfDamageVSMortals">{{localize
                 "WEAPON.TYPEOFDAMAGEVSMORTALS"}}:</label>
-            <select style="flex-grow: 1" name="data.typeOfDamageVSMortals">
+            <select class="flex1" name="data.typeOfDamageVSMortals">
                 {{#select data.typeOfDamageVSMortals}}
                 {{#each config.damageType as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
@@ -57,10 +57,10 @@
                 {{/select}}
             </select>
         </div>
-        <div class="rows">
+        <div class="flexrow">
             <label style="width: 160px" for="data.typeOfDamageVSVampires">{{localize
                 "WEAPON.TYPEOFDAMAGEVSVAMPIRES"}}:</label>
-            <select style="flex-grow: 1" name="data.typeOfDamageVSVampires">
+            <select class="flex1" name="data.typeOfDamageVSVampires">
                 {{#select data.typeOfDamageVSVampires}}
                 {{#each config.damageType as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
@@ -68,11 +68,9 @@
                 {{/select}}
             </select>
         </div>
-        <div class="sheet-header-big">
+        <div class="flexrow sheet-header-big">
             <h2>{{localize "WEAPON.DESCRIPTION"}}</h2>
         </div>
-        <div style="flex: 1; flex-basis: content;">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-        </div>
-    </div>
+        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+    </section>
 </form>

@@ -6,10 +6,48 @@
   font-family: "Goudy Old Style";
   src: url("../fonts/GOUDOS.ttf");
 }
-/* main sheet window */
-.vtm20.sheet.actor {
-  min-width: 1050px;
-  min-height: 750px;
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.flexrow > * {
+  flex: 1;
+}
+.flexrow .flex1 {
+  flex: 1;
+}
+.flexrow .flex2 {
+  flex: 2;
+}
+.flexrow .flex3 {
+  flex: 3;
+}
+.flexrow .flex4 {
+  flex: 4;
+}
+.baseline {
+  align-items: baseline;
+}
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.flexcol > * {
+  flex: 1;
+}
+.flexcol .flex1 {
+  flex: 1;
+}
+.flexcol .flex2 {
+  flex: 2;
+}
+.flexcol .flex3 {
+  flex: 3;
+}
+.flexcol .flex4 {
+  flex: 4;
 }
 .vtm20 .window-content {
   color: #333;
@@ -24,36 +62,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-image: url("../frame.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.vtm20.sheet .sheet-sidebar {
-  margin-top: 4px;
-  flex: 0 1 200px;
-  border-left: 1px solid #ddd;
-}
-.vtm20.sheet .row {
-  display: flex;
-  flex-direction: row;
-}
-/* sidebar content */
-.vtm20 .sheet-sidebar .profile-img {
-  flex: 0 0 150px;
-  background-color: black;
-}
-.vtm20.sheet .sheet-sidebar .actor-name {
-  font-weight: bold;
-  font-size: 1.25em;
-}
-.vtm20.sheet .sheet-sidebar .actor-char {
-  font-size: 1.1em;
-  display: flex;
-  justify-content: space-between;
-}
-.vtm20.sheet .sheet-sidebar .actor-char > span:first-of-type {
-  font-family: "Denver Serial Black";
-  margin-right: 0.5em;
 }
 .vtm20 .resource {
   width: 50%;
@@ -66,36 +74,9 @@
   width: 100px;
   height: 28px;
 }
-/*.vtm20 .tabs {*/
-/*height: 40px;*/
-/*border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-}
-
-  .vtm20 .tabs .item {*/
-/*line-height: 40px;*/
-/*font-size: 1.1em;
-      font-family: "Denver Serial Black";
-      display: flex;
-      justify-content: space-between;
-      margin-right: 0.5em;
-  }
-
-      .vtm20 .tabs .item.active {
-          text-decoration: underline;
-          text-shadow: none;
-      }*/
-.vtm20.actor .sheet-body {
-  margin: 35px;
-  overflow: hidden;
-  flex: 1;
-}
-.vtm20.actor .sheet-body .tab {
-  height: 100%;
-  overflow-y: auto;
-}
 .vtm20.sheet .editor {
   height: 100%;
+  background-color: red;
 }
 .vtm20 .item-list {
   list-style: none;
@@ -154,13 +135,10 @@
   line-height: 28px;
   border: none;
 }
-.vtm20.sheet .primary {
-  height: 100%;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.vtm20.sheet .primary,
+.vtm20.sheet .primary select {
   font-family: "Goudy Old Style";
+  font-size: 14px;
 }
 .vtm20.sheet .primary h1,
 .vtm20.sheet .primary h2,
@@ -199,17 +177,10 @@
   padding: 0 14px;
   list-style-type: none;
 }
-.vtm20.sheet .primary label {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 160px;
-}
 .vtm20.sheet input[type="text"] {
   color: #333;
   border-radius: 0;
   border: 0;
-  text-align: right;
   background: transparent;
 }
 .vtm20.sheet .primary input[type="number"]::-webkit-inner-spin-button {
@@ -217,12 +188,6 @@
 }
 .vtm20.sheet .primary input[type="number"] {
   max-width: 40px;
-}
-.vtm20.sheet .primary-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 1rem;
 }
 .vtm20.sheet .radio-input label {
   display: flex;
@@ -355,17 +320,7 @@
 .vtm20.sheet .helper--enable-editModed .selected .ability-label {
   text-shadow: none;
 }
-/* difficulty dialog */
 .vtm20.sheet .difficulty-dialog {
-  /* position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.2); */
   padding: 0.5rem;
 }
 .vtm20.sheet .difficulty-dialog > div {
@@ -374,72 +329,40 @@
   padding: 0.8rem;
   text-align: center;
   border: 1px solid black;
-  /* box-shadow: 0 0 10px 0 black; */
-}
-/* difficulty dialog active
-.vtm20.sheet .roll-status-2 > .primary {
-  position: relative;
-}
-
-.vtm20.sheet .roll-status-2 .difficulty-dialog {
-  display: flex;
-} */
-/* ----------------------------------------- */
-/*  Flexbox                                  */
-/* ----------------------------------------- */
-.flexrow {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.flexrow > * {
-  flex: 1;
-}
-.flexrow .flex1 {
-  flex: 1;
-}
-.flexrow .flex2 {
-  flex: 2;
-}
-.flexrow .flex3 {
-  flex: 3;
-}
-.flexrow .flex4 {
-  flex: 4;
-}
-.flexcol {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-.flexcol > * {
-  flex: 1;
-}
-.flexcol .flex1 {
-  flex: 1;
-}
-.flexcol .flex2 {
-  flex: 2;
-}
-.flexcol .flex3 {
-  flex: 3;
-}
-.flexcol .flex4 {
-  flex: 4;
 }
 .vtm20.sheet.item {
   min-width: 460px;
   min-height: 400px;
 }
-.vtm20.sheet.item h1 input {
-  text-align: right;
-  font-family: "Denver Serial Black";
+.vtm20.sheet.item .sheet-header {
+  flex: 0 0 65px;
 }
-.vtm20.sheet.item h2 {
-  font-family: "Denver Serial Black";
-  border-bottom: 0;
+.vtm20.sheet.item .itemTitle {
+  text-align: right;
 }
 .vtm20.sheet.item table input {
   text-align: center;
+}
+.vtm20.sheet.actor {
+  min-width: 940px;
+  min-height: 620px;
+}
+.vtm20.sheet.actor .sheet-body {
+  overflow: hidden;
+  flex: 1;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.vtm20.sheet.actor .sheet-body .tab {
+  height: 100%;
+  overflow-y: auto;
+}
+.vtm20.sheet.actor .sheet-sidebar {
+  flex: 0 1 200px;
+}
+.vtm20.sheet.actor .sheet-sidebar .sheet-navigation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
 }

@@ -1,9 +1,9 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">
+<form class="{{cssClass}} primary" autocomplete="off">
     <header class="sheet-header">
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+        <h1><input class="itemTitle" name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
     </header>
-    <section class="sheet-body">
+    <section class="sheet-body flexcol">
         <table>
             <tr>
                 <th>{{localize "WEAPON.KIND"}}</th>
@@ -46,10 +46,10 @@
                 </td>
             </tr>
         </table>
-        <div class="flexrow">
+        <div class="flexrow baseline">
             <label style="width: 160px" for="data.typeOfDamageVSMortals">{{localize
                 "WEAPON.TYPEOFDAMAGEVSMORTALS"}}:</label>
-            <select class="flex1" name="data.typeOfDamageVSMortals">
+            <select name="data.typeOfDamageVSMortals">
                 {{#select data.typeOfDamageVSMortals}}
                 {{#each config.damageType as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
@@ -57,10 +57,10 @@
                 {{/select}}
             </select>
         </div>
-        <div class="flexrow">
+        <div class="flexrow baseline">
             <label style="width: 160px" for="data.typeOfDamageVSVampires">{{localize
                 "WEAPON.TYPEOFDAMAGEVSVAMPIRES"}}:</label>
-            <select class="flex1" name="data.typeOfDamageVSVampires">
+            <select name="data.typeOfDamageVSVampires">
                 {{#select data.typeOfDamageVSVampires}}
                 {{#each config.damageType as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
@@ -68,9 +68,11 @@
                 {{/select}}
             </select>
         </div>
-        <div class="flexrow sheet-header-big">
+        <div class="sheet-header-big">
             <h2>{{localize "WEAPON.DESCRIPTION"}}</h2>
         </div>
-        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        <div>
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
     </section>
 </form>

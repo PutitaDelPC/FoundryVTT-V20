@@ -1,7 +1,7 @@
 <form class="{{cssClass}} primary flexrow" autocomplete="off">
     <section class="sheet-body">
         <div class="tab general" data-group="primary" data-tab="general">
-            <div>
+            <div class="flexcol">
                 <div class="sheet-header-big">
                     <h2>{{localize "SHEET.GENERAL"}}</h2>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="sheet-header-big">
                     <h2>{{localize "SHEET.BIOGRAPHY"}}</h2>
                 </div>
-                <div>
+                <div class="editorContainer">
                     {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
                 </div>
             </div>

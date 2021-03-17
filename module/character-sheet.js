@@ -120,6 +120,10 @@ export class VampireActorSheet extends ActorSheet {
         if (this.options.editMode) {
             this.unselectAbility();
             this.unselectAttribute();
+
+            target[0].innerText = game.i18n.localize('SHEET.CLOSEEDITMODE');
+        } else {
+            target[0].innerText = game.i18n.localize('SHEET.EDITMODE');
         }
 
         this.render();

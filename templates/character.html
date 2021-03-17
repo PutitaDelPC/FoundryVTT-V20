@@ -170,7 +170,7 @@
             </div>
         </div>
 
-        <div class="tab attributes roll-status" data-group="primary" data-tab="advantages">
+        <div class="tab advantages roll-status" data-group="primary" data-tab="advantages">
             <div class="sheet-header-big">
                 <h2>{{localize "SHEET.ADVANTAGES"}}</h2>
             </div>
@@ -214,10 +214,23 @@
             </div>
         </div>
 
+        {{!-- Inventory Tab --}}
         <div class="tab items" data-group="primary" data-tab="items">
-            <ul>
-                <li class="radio-input">Stuff</li>
-            </ul>
+            <div class="sheet-header-big">
+                <h2>{{localize "SHEET.ITEMS"}}</h2>
+            </div>
+            <div class="flexcol">
+                <div class="flexrow">
+                    <ul>
+                        {{#each items as |item iid|}}
+                        <li class="radio-input">
+                            <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+                            <h4>{{item.name}}</h4>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 

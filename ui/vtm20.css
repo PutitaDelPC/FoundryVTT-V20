@@ -369,3 +369,6 @@
   flex-wrap: nowrap;
   align-items: flex-start;
 }
+.vtm20.sheet.actor .overflow-y {
+  overflow-y: auto;
+}

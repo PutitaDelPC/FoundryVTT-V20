@@ -34,17 +34,19 @@ export class VampireActorSheet extends ActorSheet {
         const advantages = { ...data.data.advantages };
         const { selectedAbility, selectedAttribute } = this.options;
 
-        const filterActivated = (obj) => {
-            const newObject = {};
-            for (const key in obj) {
-                if (obj[key].activated) {
-                    newObject[key] = obj[key];
+        if (!this.options.editMode) {
+            const filterActivated = (obj) => {
+                const newObject = {};
+                for (const key in obj) {
+                    if (obj[key].value > 0) {
+                        newObject[key] = obj[key];
+                    }
                 }
-            }
-            return newObject;
-        };
-        advantages.disciplines = filterActivated(advantages.disciplines);
-        advantages.backgrounds = filterActivated(advantages.backgrounds);
+                return newObject;
+            };
+            advantages.disciplines = filterActivated(advantages.disciplines);
+            advantages.backgrounds = filterActivated(advantages.backgrounds);
+        }
 
         data.data.advantages = advantages;
 
@@ -115,15 +117,18 @@ export class VampireActorSheet extends ActorSheet {
         const html = app.find('.window-content');
 
         html.toggleClass('helper--enable-editMode');
-        this.options.editMode = !this.options.editMode || false;
+
+        this.options.editMode = !this.options.editMode;
 
         if (this.options.editMode) {
             this.unselectAbility();
             this.unselectAttribute();
 
-            target[0].innerText = game.i18n.localize('SHEET.CLOSEEDITMODE');
+            target[0].innerHTML = '<i class="fas fa-times"></i>' + game.i18n.localize('SHEET.CLOSEEDITMODE');
+
+            this.getData();
         } else {
-            target[0].innerText = game.i18n.localize('SHEET.EDITMODE');
+            target[0].innerHTML = '<i class="fas fa-edit"></i>' + game.i18n.localize('SHEET.EDITMODE');
         }
 
         this.render();

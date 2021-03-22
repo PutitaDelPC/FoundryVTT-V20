@@ -24,11 +24,23 @@
                 <div class="flexcol">
                     <div class="flexrow baseline">
                         <h4>{{localize "CHAR.NATURE"}}:</h4>
-                        <input name="data.nature" type="text" value="{{data.nature}}" placeholder="{{localize 'CHAR.NATURE'}}" />
+                        <select name="data.nature">
+                            {{#select data.nature}}
+                            {{#each config.personalityArchetypes as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
                     </div>
                     <div class="flexrow baseline">
                         <h4>{{localize "CHAR.DEMEANOR"}}:</h4>
-                        <input name="data.demeanor" type="text" value="{{data.demeanor}}" placeholder="{{localize 'CHAR.DEMEANOR'}}" />
+                        <select name="data.demeanor">
+                            {{#select data.demeanor}}
+                            {{#each config.personalityArchetypes as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
                     </div>
                     <div class="flexrow baseline">
                         <h4>{{localize "CHAR.CONCEPT"}}:</h4>
@@ -38,11 +50,17 @@
                 <div class="flexcol">
                     <div class="flexrow baseline">
                         <h4>{{localize "CHAR.CLAN"}}:</h4>
-                        <input name="data.clan" type="text" value="{{data.clan}}" placeholder="{{localize 'CHAR.CLAN'}}" />
+                        <select name="data.clan">
+                            {{#select data.clan}}
+                            {{#each config.clan as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
                     </div>
                     <div class="flexrow baseline">
                         <h4>{{localize "CHAR.GENERATION"}}:</h4>
-                        <input name="data.generation" type="text" value="{{data.generation}}" placeholder="{{localize 'CHAR.GENERATION'}}" />
+                        <input name="data.generation" type="number" min="1" max="15" value="{{data.generation}}" />
                     </div>
                     <div class="flexrow baseline">
                         <h4>{{localize "CHAR.SIRE"}}:</h4>

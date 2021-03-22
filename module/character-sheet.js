@@ -31,6 +31,8 @@ export class VampireActorSheet extends ActorSheet {
     /** @override */
     getData() {
         const data = super.getData();
+        data.config = CONFIG.vtm20;
+
         const advantages = { ...data.data.advantages };
         const { selectedAbility, selectedAttribute } = this.options;
 

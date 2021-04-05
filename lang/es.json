@@ -21,7 +21,6 @@
   "SHEET.EDITMODE": "Modo Edición",
   "SHEET.CLOSEEDITMODE": "Cerrar Edición",
   "SHEET.ITEMS": "Items",
-
   "CLAN.ASSAMITE": "Assamita",
   "CLAN.BRUJAH": "Brujah",
   "CLAN.GANGREL": "Gangrel",
@@ -36,7 +35,6 @@
   "CLAN.TZIMISCE": "Tzimisce",
   "CLAN.VENTRUE": "Ventrue",
   "CLAN.CAITIFF": "Caitiff",
-
   "PERSONALITY.ANSIOSODEEMOCIONES": "Ansioso de Emociones",
   "PERSONALITY.ARQUITECTO": "Arquitecto",
   "PERSONALITY.AUTOCRATA": "Autócrata",
@@ -79,7 +77,6 @@
   "PERSONALITY.TRADICIONALISTA": "Tradicionalista",
   "PERSONALITY.TRUHAN": "Truhán",
   "PERSONALITY.VISIONARIO": "Visionario",
-
   "CHAR.NAME": "Nombre",
   "CHAR.PLAYER": "Jugador",
   "CHAR.CHRONICLE": "Crónica",
@@ -98,7 +95,6 @@
   "CHAR.INTELLIGENCE": "Inteligencia",
   "CHAR.PERCEPTION": "Percepción",
   "CHAR.WITS": "Astucia",
-
   "TALENTS.ALTERTNESS": "Alerta",
   "TALENTS.ATHLETICS": "Atletismo",
   "TALENTS.STREETWISE": "Callejeo",
@@ -109,7 +105,6 @@
   "TALENTS.LEADERSHIP": "Liderazgo",
   "TALENTS.BRAWL": "Pelea",
   "TALENTS.SUBTERFUGE": "Subterfugio",
-
   "SKILLS.ANIMALKEN": "Trato con Animales",
   "SKILLS.CRAFT": "Artesanía",
   "SKILLS.DRIVE": "Conducir",
@@ -120,7 +115,6 @@
   "SKILLS.PERFORMANCE": "Interpretación",
   "SKILLS.STEALTH": "Sigilo",
   "SKILLS.SURVIVAL": "Supervivencia",
-
   "KNOWLEDGE.ACADEMICS": "Academicismo",
   "KNOWLEDGE.COMPUTER": "Informática",
   "KNOWLEDGE.FINANCE": "Finanzas",
@@ -131,39 +125,23 @@
   "KNOWLEDGE.POLITICS": "Política",
   "KNOWLEDGE.SCIENCE": "Ciencias",
   "KNOWLEDGE.TECHNOLOGY": "Tecnología",
-
   "DISCIPLINES.ANIMALISM": "Animalismo",
   "DISCIPLINES.AUSPEX": "Auspex",
-  "DISCIPLINES.BARDO": "Bardo",
   "DISCIPLINES.CELERITY": "Celeridad",
   "DISCIPLINES.CHIMESTRY": "Quimerismo",
-  "DISCIPLINES.DAIMONION": "Daimonion",
   "DISCIPLINES.DEMENTATION": "Dementación",
   "DISCIPLINES.DOMINATE": "Dominación",
-  "DISCIPLINES.FLIGHT": "Vuelo",
+  "DISCIPLINES.EXTINCTION": "Extinción",
   "DISCIPLINES.FORTITUDE": "Fortaleza",
-  "DISCIPLINES.KOLDUNICSORCERY": "Hechicería Koldúnica",
-  "DISCIPLINES.MELPOMINEE": "Melpómene",
-  "DISCIPLINES.MYTHERCERIA": "Mytherceria",
   "DISCIPLINES.NECROMANCY": "Necromancia",
-  "DISCIPLINES.OBEAH": "Obeah",
   "DISCIPLINES.OBFUSCATE": "Ofuscación",
   "DISCIPLINES.OBTENEBRATION": "Obtenebración",
-  "DISCIPLINES.OGHAM": "Ogham",
   "DISCIPLINES.POTENCE": "Potencia",
   "DISCIPLINES.PRESENCE": "Presencia",
   "DISCIPLINES.PROTEAN": "Protean",
-  "DISCIPLINES.QUIETUS": "Quiteus",
-  "DISCIPLINES.SANGUINUS": "Sanguinus",
   "DISCIPLINES.SERPENTIS": "Serpentis",
-  "DISCIPLINES.SPIRITUS": "Spiritus",
-  "DISCIPLINES.TEMPORIS": "Temporis",
-  "DISCIPLINES.THANATOSIS": "Tanatosis",
   "DISCIPLINES.THAUMATURGY": "Taumaturgia",
-  "DISCIPLINES.VALEREN": "Valeren",
   "DISCIPLINES.VICISSITUDE": "Vicisitud",
-  "DISCIPLINES.VISCERATIKA": "Visceratika",
-
   "BACKGROUNDS.ALLIES": "Aliados",
   "BACKGROUNDS.ALTERNATIVEIDENTITY": "Identidad Alternativa",
   "BACKGROUNDS.BLACKHANDMEMEBERSHIP": "Miembro de la Mano Negra",
@@ -178,11 +156,9 @@
   "BACKGROUNDS.RETAINERS": "Criados",
   "BACKGROUNDS.RITUALS": "Rituales",
   "BACKGROUNDS.STATUS": "Estatus",
-
   "VIRTUES.CONSCIENCECONVICTION": "Conciencia/Convicción",
   "VIRTUES.SELFCONTROLINSTINCT": "Autocontrol/Instinto",
   "VIRTUES.COURAGE": "Coraje",
-
   "DIFFICULTY.WAS": "Dificultad:",
   "DIFFICULTY.2": "2",
   "DIFFICULTY.3": "3",
@@ -197,16 +173,13 @@
   "DIFFICULTY.ROLL": "Tirada",
   "DIFFICULTY.CANCEL": "Cancelar",
   "DIFFICULTY.SAVE": "Guardar",
-
   "DEGREES.GET": "lanza los dados y consigue",
   "DEGREES.GETFAILURE": "lanza los dados y <b>falla</b>",
   "DEGREES.FAILURE": "fallo",
   "DEGREES.GETBOTCH": "lanza los dados y <b>fracasa</b>",
   "DEGREES.BOTCH": "fracaso",
   "DEGREES.SUCCESS": "exito/s",
-
   "Vampire": "Vampiro",
-
   "WEAPON.DESCRIPTION": "Descripción",
   "WEAPON.KIND": "Clase",
   "WEAPON.TYPE": "Tipo",
@@ -217,7 +190,6 @@
   "WEAPON.RATE": "Cadencia",
   "WEAPON.CAPACITY": "Capacidad",
   "WEAPON.CONCEALMENT": "Ocultación",
-
   "vtm20": {
     "weaponKind": {
       "ranged": "A distancia",

@@ -231,7 +231,7 @@
             "type": "Number",
             "label": "DISCIPLINES.ANIMALISM",
             "value": 0,
-            "activated": true
+            "activated": false
           },
           "auspex": {
             "type": "Number",
@@ -239,27 +239,9 @@
             "value": 0,
             "activated": false
           },
-          "bardo": {
-            "type": "Number",
-            "label": "DISCIPLINES.BARDO",
-            "value": 0,
-            "activated": false
-          },
           "celerity": {
             "type": "Number",
             "label": "DISCIPLINES.CELERITY",
-            "value": 0,
-            "activated": false
-          },
-          "chimestry": {
-            "type": "Number",
-            "label": "DISCIPLINES.CHIMESTRY",
-            "value": 0,
-            "activated": false
-          },
-          "daimonion": {
-            "type": "Number",
-            "label": "DISCIPLINES.DAIMONION",
             "value": 0,
             "activated": false
           },
@@ -275,9 +257,9 @@
             "value": 0,
             "activated": false
           },
-          "flight": {
+          "extinction": {
             "type": "Number",
-            "label": "DISCIPLINES.FLIGHT",
+            "label": "DISCIPLINES.EXTINCTION",
             "value": 0,
             "activated": false
           },
@@ -287,39 +269,9 @@
             "value": 0,
             "activated": false
           },
-          "koldunic_sorcery": {
-            "type": "Number",
-            "label": "DISCIPLINES.KOLDUNICSORCERY",
-            "value": 0,
-            "activated": false
-          },
-          "melpominee": {
-            "type": "Number",
-            "label": "DISCIPLINES.MELPOMINEE",
-            "value": 0,
-            "activated": false
-          },
-          "mytherceria": {
-            "type": "Number",
-            "label": "DISCIPLINES.MYTHERCERIA",
-            "value": 0,
-            "activated": false
-          },
           "necromancy": {
             "type": "Number",
             "label": "DISCIPLINES.NECROMANCY",
-            "value": 0,
-            "activated": false
-          },
-          "obeah": {
-            "type": "Number",
-            "label": "DISCIPLINES.OBEAH",
-            "value": 0,
-            "activated": false
-          },
-          "obfuscate": {
-            "type": "Number",
-            "label": "DISCIPLINES.OBFUSCATE",
             "value": 0,
             "activated": false
           },
@@ -329,9 +281,9 @@
             "value": 0,
             "activated": false
           },
-          "ogham": {
+          "obfuscate": {
             "type": "Number",
-            "label": "DISCIPLINES.OGHAM",
+            "label": "DISCIPLINES.OBFUSCATE",
             "value": 0,
             "activated": false
           },
@@ -353,15 +305,9 @@
             "value": 0,
             "activated": false
           },
-          "quietus": {
+          "chimestry": {
             "type": "Number",
-            "label": "DISCIPLINES.QUIETUS",
-            "value": 0,
-            "activated": false
-          },
-          "sanguinus": {
-            "type": "Number",
-            "label": "DISCIPLINES.SANGUINUS",
+            "label": "DISCIPLINES.CHIMESTRY",
             "value": 0,
             "activated": false
           },
@@ -371,45 +317,15 @@
             "value": 0,
             "activated": false
           },
-          "spiritus": {
-            "type": "Number",
-            "label": "DISCIPLINES.SPIRITUS",
-            "value": 0,
-            "activated": false
-          },
-          "temporis": {
-            "type": "Number",
-            "label": "DISCIPLINES.TEMPORIS",
-            "value": 0,
-            "activated": false
-          },
-          "thanatosis": {
-            "type": "Number",
-            "label": "DISCIPLINES.THANATOSIS",
-            "value": 0,
-            "activated": false
-          },
           "thaumaturgy": {
             "type": "Number",
             "label": "DISCIPLINES.THAUMATURGY",
             "value": 0,
             "activated": false
           },
-          "valeren": {
-            "type": "Number",
-            "label": "DISCIPLINES.VALEREN",
-            "value": 0,
-            "activated": false
-          },
           "vicissitude": {
             "type": "Number",
             "label": "DISCIPLINES.VICISSITUDE",
-            "value": 0,
-            "activated": false
-          },
-          "visceratika": {
-            "type": "Number",
-            "label": "DISCIPLINES.VISCERATIKA",
             "value": 0,
             "activated": false
           }
@@ -421,27 +337,27 @@
             "value": 0,
             "activated": true
           },
-          "alternative_identity": {
-            "type": "Number",
-            "label": "BACKGROUNDS.ALTERNATIVEIDENTITY",
-            "value": 0,
-            "activated": false
-          },
-          "black_hand_membership": {
-            "type": "Number",
-            "label": "BACKGROUNDS.BLACKHANDMEMEBERSHIP",
-            "value": 0,
-            "activated": false
-          },
           "contacts": {
             "type": "Number",
             "label": "BACKGROUNDS.CONTACTS",
             "value": 0,
             "activated": false
           },
+          "retainers": {
+            "type": "Number",
+            "label": "BACKGROUNDS.RETAINERS",
+            "value": 0,
+            "activated": false
+          },
           "domain": {
             "type": "Number",
             "label": "BACKGROUNDS.DOMAIN",
+            "value": 0,
+            "activated": false
+          },
+          "status": {
+            "type": "Number",
+            "label": "BACKGROUNDS.STATUS",
             "value": 0,
             "activated": false
           },
@@ -457,9 +373,9 @@
             "value": 0,
             "activated": false
           },
-          "herd": {
+          "alternative_identity": {
             "type": "Number",
-            "label": "BACKGROUNDS.HERD",
+            "label": "BACKGROUNDS.ALTERNATIVEIDENTITY",
             "value": 0,
             "activated": false
           },
@@ -475,27 +391,27 @@
             "value": 0,
             "activated": false
           },
+          "black_hand_membership": {
+            "type": "Number",
+            "label": "BACKGROUNDS.BLACKHANDMEMEBERSHIP",
+            "value": 0,
+            "activated": false
+          },
+          "herd": {
+            "type": "Number",
+            "label": "BACKGROUNDS.HERD",
+            "value": 0,
+            "activated": false
+          },
           "resources": {
             "type": "Number",
             "label": "BACKGROUNDS.RESOURCES",
             "value": 0,
             "activated": false
           },
-          "retainers": {
-            "type": "Number",
-            "label": "BACKGROUNDS.RETAINERS",
-            "value": 0,
-            "activated": false
-          },
           "rituals": {
             "type": "Number",
             "label": "BACKGROUNDS.RITUALS",
-            "value": 0,
-            "activated": false
-          },
-          "status": {
-            "type": "Number",
-            "label": "BACKGROUNDS.STATUS",
             "value": 0,
             "activated": false
           }
@@ -555,9 +471,9 @@
       "templates": [
         "base"
       ],
-      "class" : 1,
-      "rating" : 1,
-      "penalty" : 0
+      "class": 1,
+      "rating": 1,
+      "penalty": 0
     },
     "macro": {
       "templates": [

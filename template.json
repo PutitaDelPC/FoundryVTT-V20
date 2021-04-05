@@ -433,6 +433,78 @@
             "value": 0
           }
         }
+      },
+      "healthLevels": {
+        "fullHealth": {
+          "label": "HEALTH.FULLHEALTH",
+          "dicePoolPenalty": 0,
+          "movementPenalty": "MOVEMENTPENALTY.NONE",
+          "visible": false,
+          "value": 0
+        },
+        "bruised": {
+          "label": "HEALTH.BRUISED",
+          "dicePoolPenalty": 0,
+          "movementPenalty": "MOVEMENTPENALTY.NONE",
+          "visible": true,
+          "value": 0
+        },
+        "hurt": {
+          "label": "HEALTH.HURT",
+          "dicePoolPenalty": -1,
+          "movementPenalty": "MOVEMENTPENALTY.NONE",
+          "visible": true,
+          "value": 0
+        },
+        "injured": {
+          "label": "HEALTH.INJURED",
+          "dicePoolPenalty": -1,
+          "movementPenalty": "MOVEMENTPENALTY.HALFMAXRUNNINGSPEED",
+          "visible": true,
+          "value": 0
+        },
+        "wounded": {
+          "label": "HEALTH.WOUNDED",
+          "dicePoolPenalty": -2,
+          "movementPenalty": "MOVEMENTPENALTY.NOTRUNANDCANNOTMOVEANDATTACK",
+          "visible": true,
+          "value": 0
+        },
+        "mauled": {
+          "label": "HEALTH.MAULED",
+          "dicePoolPenalty": -2,
+          "movementPenalty": "MOVEMENTPENALTY.THREEYARDSPERTURN",
+          "visible": true,
+          "value": 0
+        },
+        "crippled": {
+          "label": "HEALTH.CRIPPLED",
+          "dicePoolPenalty": -5,
+          "movementPenalty": "MOVEMENTPENALTY.ONEYARDPERTURN",
+          "visible": true,
+          "value": 0
+        },
+        "incapacitated": {
+          "label": "HEALTH.INCAPACITATED",
+          "dicePoolPenalty": 0,
+          "movementPenalty": "MOVEMENTPENALTY.NOMOVEMENT",
+          "visible": true,
+          "value": 0
+        },
+        "torpor": {
+          "label": "HEALTH.TORPOR",
+          "dicePoolPenalty": 0,
+          "movementPenalty": "MOVEMENTPENALTY.NOMOVEMENT",
+          "visible": false,
+          "value": 0
+        },
+        "finalDeath": {
+          "label": "HEALTH.FINALDEATH",
+          "dicePoolPenalty": 0,
+          "movementPenalty": "MOVEMENTPENALTY.NOMOVEMENT",
+          "visible": false,
+          "value": 0
+        }
       }
     }
   },

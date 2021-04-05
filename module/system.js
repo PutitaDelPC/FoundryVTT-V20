@@ -59,6 +59,7 @@ Hooks.once('init', async function() {
     // Pre-load templates
     loadTemplates([
         'systems/foundryvtt-v20/templates/attribute-input.html',
+        'systems/foundryvtt-v20/templates/healthLevel-input.html',
         'systems/foundryvtt-v20/templates/chat/select.html',
         'systems/foundryvtt-v20/templates/chat/roll.html'
     ]);

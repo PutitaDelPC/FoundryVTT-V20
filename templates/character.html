@@ -233,6 +233,25 @@
                     </ul>
                 </div>
             </div>
+            <div class="sheet-header-big">
+            </div>
+            <div class="flexrow">
+                <div class="column overflow-y">
+                    <h4>{{localize "SHEET.HEALTH"}}</h4>
+                    <table>
+                        {{#each data.healthLevels as |healthLevel key|}}
+                            {{> systems/foundryvtt-v20/templates/healthLevel-input.html
+                                penalty=healthLevel.dicePoolPenalty
+                                value=healthLevel.value label=healthLevel.label id=../actor._id key=key
+                                type="healthLevel"}}
+                        {{/each}}
+                    </table>
+                </div>
+                <div class="column overflow-y">
+                </div>
+                <div class="column overflow-y">
+                </div>
+            </div>
         </div>
 
         {{!-- Inventory Tab --}}
